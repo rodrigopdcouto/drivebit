@@ -6,6 +6,7 @@ enum MotorEnum {
     //% block="Motor2"
     m2
 }
+//% color="#2695b5" weight=100 icon="\uf1b9" block="DriveBit"
 namespace drivebit {
     let motor11: DigitalPin = DigitalPin.P8
     let motor12: DigitalPin = DigitalPin.P12
