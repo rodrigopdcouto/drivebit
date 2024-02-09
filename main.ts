@@ -27,7 +27,7 @@ namespace drivebit {
     let motor22a: AnalogPin = degitalPin2analogPin(motor22)
 
     //% blockId=initializeMotorDriver
-    //% block="initialize Driver $motor pin1=$pin1 pin2=$pin2"
+    //% block="Initialize Driver $motor pin1=$pin1 pin2=$pin2"
     export function initializeMotorDriver(motor: MotorEnum, pin1: DigitalPin, pin2: DigitalPin): void {
         if (motor == MotorEnum.m1) {
             motor11 = pin1
@@ -68,7 +68,7 @@ namespace drivebit {
 
     let OutputVal = 0
     //% blockId=driveMotor
-    //% block="drive motor $motor signed speed $sspeed"
+    //% block="Drive Motor $motor signed speed $sspeed"
     //% sspeed.min=-100 sspeed.max=100
     export function driveMotor(motor: MotorEnum, sspeed: number): void {
         if (motor == MotorEnum.m1) {
@@ -99,7 +99,7 @@ namespace drivebit {
     }
 
     //% blockId=brakeMotor
-    //% block="brake motor $motor"
+    //% block="Brake Motor $motor"
     export function brakeMotor(motor: MotorEnum): void {
         if (motor == MotorEnum.m1) {
             pins.digitalWritePin(motor11, 1)
@@ -111,7 +111,7 @@ namespace drivebit {
     }
 
     //% blockId=coastMotor
-    //% block="coast motor $motor"
+    //% block="Coast Motor $motor"
     export function coastMotor(motor: MotorEnum): void {
         if (motor == MotorEnum.m1) {
             pins.digitalWritePin(motor11, 0)
