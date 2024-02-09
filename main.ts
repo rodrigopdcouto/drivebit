@@ -1,11 +1,3 @@
-/**
- * Motor Driver Blocks
- * Motor Driver Extension for a general 2-motor configuration cart
- * default pin asign
- * - Motor1 P8 P12
- * - Motor2 P0 P16
- */
-
 enum MotorEnum {
     //%blockId=drivebit_motordriver_motor1
     //% block="Motor1"
@@ -14,8 +6,6 @@ enum MotorEnum {
     //% block="Motor2"
     m2
 }
-
-//% weight=90 color=#228b22 icon="\uf1b9" block="DriveBit"
 namespace drivebit {
     let motor11: DigitalPin = DigitalPin.P8
     let motor12: DigitalPin = DigitalPin.P12
