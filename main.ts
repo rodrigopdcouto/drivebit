@@ -59,7 +59,7 @@ namespace drivebit {
 
     let OutputVal = 0
     //% blockId=driveMotor
-    //% block="Drive Motor $motor signed speed $sspeed"
+    //% block="Drive Motor $motor Control Speed $sspeed"
     //% sspeed.min=-100 sspeed.max=100
     export function driveMotor(motor: MotorEnum, sspeed: number): void {
         if (motor == MotorEnum.m1) {
@@ -89,9 +89,9 @@ namespace drivebit {
         }
     }
 
-    //% blockId=brakeMotor
-    //% block="Brake Motor $motor"
-    export function brakeMotor(motor: MotorEnum): void {
+    //% blockId=stopMotor
+    //% block="Stop Motor $motor"
+    export function stopMotor(motor: MotorEnum): void {
         if (motor == MotorEnum.m1) {
             pins.digitalWritePin(motor11, 1)
             pins.digitalWritePin(motor12, 1)
@@ -101,9 +101,9 @@ namespace drivebit {
         }
     }
 
-    //% blockId=coastMotor
-    //% block="Coast Motor $motor"
-    export function coastMotor(motor: MotorEnum): void {
+    //% blockId=baseMotor
+    //% block="Base Motor $motor"
+    export function baseMotor(motor: MotorEnum): void {
         if (motor == MotorEnum.m1) {
             pins.digitalWritePin(motor11, 0)
             pins.digitalWritePin(motor12, 0)
