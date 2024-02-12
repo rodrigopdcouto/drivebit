@@ -58,10 +58,10 @@ namespace drivebit {
     }
 
     let OutputVal = 0
-    //% blockId=driveMotor
-    //% block="Drive Motor $motor Control Speed $sspeed"
+    //% blockId=customMotor
+    //% block="Custom Motor $motor Control Speed $sspeed"
     //% sspeed.min=-100 sspeed.max=100
-    export function driveMotor(motor: MotorEnum, sspeed: number): void {
+    export function customMotor(motor: MotorEnum, sspeed: number): void {
         if (motor == MotorEnum.m1) {
             if (sspeed < 0) {
                 OutputVal = Math.trunc(-sspeed * 10.23)
